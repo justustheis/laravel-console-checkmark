@@ -6,25 +6,20 @@ declare(strict_types=1);
  * This file is part of Laravel Console Task.
  *
  * (c) Nuno Maduro <enunomaduro@gmail.com>
+ * (c) Justus Theis <kontakt@j-theis.de>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
-namespace NunoMaduro\Tests\LaravelConsoleTask;
+namespace JustusTheis\LaravelConsoleCheckmark;
 
-use Illuminate\Console\Command;
-use NunoMaduro\LaravelConsoleTask\LaravelConsoleTaskServiceProvider;
-use PHPUnit\Framework\TestCase;
 use ReflectionClass;
+use Illuminate\Console\Command;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Output\OutputInterface;
 
-/**
- * This is the service provider test class.
- *
- * @author Nuno Maduro <enunomaduro@gmail.com>
- */
-class LaravelConsoleTaskTest extends TestCase
+class LaravelConsoleCheckmarkTest extends TestCase
 {
     public function testSuccessfulTaskWithReturnValueAndDecoratedOutput()
     {
@@ -49,7 +44,7 @@ class LaravelConsoleTaskTest extends TestCase
 
         $outputMock = $this->createMock(OutputInterface::class);
 
-        $outputMock->expects($this->once())
+        $outputMock->expects($this->exactly(3))
             ->method('isDecorated')
             ->willReturn(true);
 
@@ -71,7 +66,7 @@ class LaravelConsoleTaskTest extends TestCase
         $commandOutputProperty->setAccessible(true);
         $commandOutputProperty->setValue($command, $outputMock);
 
-        (new LaravelConsoleTaskServiceProvider(null))->boot();
+        (new LaravelConsoleCheckmarkServiceProvider(null))->boot();
 
         $this->assertTrue(
             $command->task('Foo', $task)
@@ -101,7 +96,7 @@ class LaravelConsoleTaskTest extends TestCase
 
         $outputMock = $this->createMock(OutputInterface::class);
 
-        $outputMock->expects($this->once())
+        $outputMock->expects($this->exactly(4))
             ->method('isDecorated')
             ->willReturn(false);
 
@@ -122,7 +117,7 @@ class LaravelConsoleTaskTest extends TestCase
         $commandOutputProperty->setAccessible(true);
         $commandOutputProperty->setValue($command, $outputMock);
 
-        (new LaravelConsoleTaskServiceProvider(null))->boot();
+        (new LaravelConsoleCheckmarkServiceProvider(null))->boot();
 
         $this->assertTrue(
             $command->task('Foo', $task)
@@ -135,7 +130,7 @@ class LaravelConsoleTaskTest extends TestCase
 
         $outputMock = $this->createMock(OutputInterface::class);
 
-        $outputMock->expects($this->once())
+        $outputMock->expects($this->exactly(3))
             ->method('isDecorated')
             ->willReturn(true);
 
@@ -157,7 +152,7 @@ class LaravelConsoleTaskTest extends TestCase
         $commandOutputProperty->setAccessible(true);
         $commandOutputProperty->setValue($command, $outputMock);
 
-        (new LaravelConsoleTaskServiceProvider(null))->boot();
+        (new LaravelConsoleCheckmarkServiceProvider(null))->boot();
 
         $this->assertFalse(
             $command->task(
@@ -175,7 +170,7 @@ class LaravelConsoleTaskTest extends TestCase
 
         $outputMock = $this->createMock(OutputInterface::class);
 
-        $outputMock->expects($this->once())
+        $outputMock->expects($this->exactly(4))
             ->method('isDecorated')
             ->willReturn(false);
 
@@ -196,7 +191,7 @@ class LaravelConsoleTaskTest extends TestCase
         $commandOutputProperty->setAccessible(true);
         $commandOutputProperty->setValue($command, $outputMock);
 
-        (new LaravelConsoleTaskServiceProvider(null))->boot();
+        (new LaravelConsoleCheckmarkServiceProvider(null))->boot();
 
         $this->assertFalse(
             $command->task(
@@ -214,7 +209,7 @@ class LaravelConsoleTaskTest extends TestCase
 
         $outputMock = $this->createMock(OutputInterface::class);
 
-        $outputMock->expects($this->once())
+        $outputMock->expects($this->exactly(4))
             ->method('isDecorated')
             ->willReturn(false);
 
@@ -235,7 +230,7 @@ class LaravelConsoleTaskTest extends TestCase
         $commandOutputProperty->setAccessible(true);
         $commandOutputProperty->setValue($command, $outputMock);
 
-        (new LaravelConsoleTaskServiceProvider(null))->boot();
+        (new LaravelConsoleCheckmarkServiceProvider(null))->boot();
 
         $this->expectException(\Exception::class);
 

@@ -1,16 +1,20 @@
 {
-    "name": "nunomaduro/laravel-console-task",
-    "description": "Laravel Console Task is a output method for your Laravel/Laravel Zero commands.",
-    "keywords": ["console", "command-line", "php", "cli", "laravel-zero", "laravel", "artisan", "symfony"],
+    "name": "justustheis/laravel-console-checkmark",
+    "description": "Laravel Console CheckMark is an output method for laravel commands representing success with a checkmark. ",
+    "keywords": ["console", "command-line", "php", "cli", "laravel", "artisan"],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/nunomaduro/laravel-console-task/issues",
-        "source": "https://github.com/nunomaduro/laravel-console-task"
+        "issues": "https://github.com/justustheis/laravel-console-checkmark/issues",
+        "source": "https://github.com/justustheis/laravel-console-checkmark"
     },
     "authors": [
         {
             "name": "Nuno Maduro",
             "email": "enunomaduro@gmail.com"
+        },
+        {
+            "name": "Justus Theis",
+            "email": "kontakt@j-theis.de"
         }
     ],
     "require": {
@@ -23,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NunoMaduro\\LaravelConsoleTask\\": "src/"
+            "JustusTheis\\LaravelConsoleCheckmark\\": "src/"
         }
     },
     "config": {
@@ -33,7 +37,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "NunoMaduro\\LaravelConsoleTask\\LaravelConsoleTaskServiceProvider"
+                "JustusTheis\\LaravelConsoleCheckmark\\LaravelConsoleCheckmarkServiceProvider"
             ]
         }
     },
