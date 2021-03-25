@@ -28,7 +28,7 @@ Laravel Console Checkmark is a fork of Laravel Console Task created by [Nuno Mad
 Require Laravel Console Task using [Composer](https://getcomposer.org):
 
 ```bash
-composer require nunomaduro/laravel-console-task
+composer require justustheis/laravel-console-checkmark
 ```
 
 ## Usage
