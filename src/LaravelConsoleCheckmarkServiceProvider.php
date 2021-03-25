@@ -17,11 +17,6 @@ namespace JustusTheis\LaravelConsoleCheckmark;
 use Illuminate\Console\Command;
 use Illuminate\Support\ServiceProvider;
 
-/**
- * This is an Laravel Console Task Service Provider implementation.
- *
- * @author Nuno Maduro <enunomaduro@gmail.com>
- */
 class LaravelConsoleCheckmarkServiceProvider extends ServiceProvider
 {
     /**
