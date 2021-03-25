@@ -1,18 +1,23 @@
-<p align="center">
-    <img src="docs/example.png" width="100%">
-</p>
+# laravel-console-checkmark is a checkmark style output for laravel console tasks
+![Maintenance](https://img.shields.io/maintenance/yes/2021)
+![Packagist](https://img.shields.io/packagist/dt/justustheis/laravel-console-checkmark)
+![Packagist Version](https://img.shields.io/packagist/v/justustheis/laravel-console-checkmark)
+![GitHub issues](https://img.shields.io/github/issues/justustheis/laravel-console-checkmark)
+![GitHub](https://img.shields.io/github/license/justustheis/kaish)
 
-<p align="center">
-  <a href="https://styleci.io/repos/113789331"><img src="https://styleci.io/repos/113789331/shield" alt="StyleCI Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-console-task"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/laravel-console-task.svg" alt="Quality Score"></img></a>
-  <a href="https://packagist.org/packages/nunomaduro/laravel-console-task"><img src="https://poser.pugx.org/nunomaduro/laravel-console-task/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/nunomaduro/laravel-console-task"><img src="https://poser.pugx.org/nunomaduro/laravel-console-task/v/stable.svg" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/nunomaduro/laravel-console-task"><img src="https://poser.pugx.org/nunomaduro/laravel-console-task/license.svg" alt="License"></a>
-</p>
+![LaravelConsoleCheckmark](https://user-images.githubusercontent.com/7760415/112520912-38a9d180-8d9c-11eb-86b9-fdbfbdb401bb.png)
 
-## About Laravel Console Task
+> This package is highly inspired by and partly forked from [nunomaduro/laravel-console-task](https://github.com/nunomaduro/laravel-console-task)
 
-Laravel Console Task was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is output method for Laravel Console Commands.
+## About Laravel Console Checkmark
+
+Laravel Console Checkmark is a fork of Laravel Console Task created by [Nuno Maduro](https://github.com/nunomaduro). His package is an output method for Laravel Console Commands. This fork adds the functionality to output sub tasks or print status information about the main task.
+
+## Installation
+> **Requires:**
+- **[PHP ^7.4|^7.0](https://php.net/releases/)**
+- **[Laravel ^6.0|^7.0|^8.0](https://github.com/laravel/laravel)**
+
 
 ## Installation
 
@@ -38,23 +43,19 @@ class LaravelInstallCommand extends Command
      */
     public function handle()
     {
-        $this->task('Installing Laravel', function () {
-            return true;
-        });
-
-        $this->task('Doing something else', function () {
-            return false;
+        $this->task('Installing Laravel', function (ConsoleCheckmarkOutput $output) {
+            $output->text('Normal style text');
+            $output->success('A success message');
+            $output->error('A error message');
+            $output->caution('A caution message');
+            $output->comment('A comment message');
+            $output->note('A magenta colored note message');
+            
         });
     }
 }
 ```
 
-## Contributing
-
-Thank you for considering to contribute to Laravel Console Task. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
-
-You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@enunomaduro](https://twitter.com/enunomaduro)
-
 ## License
 
-Laravel Console Task is an open-sourced software licensed under the [MIT license](LICENSE.md).
+Laravel Console Checkmark is an open-sourced software licensed under the [MIT license](LICENSE.md).
