@@ -14,12 +14,6 @@
 Laravel Console Checkmark is a fork of [nunomaduro/laravel-console-task](https://github.com/nunomaduro/laravel-console-task) created by [Nuno Maduro](https://github.com/nunomaduro). His package is an output method for Laravel Console Commands. This fork adds the functionality to output sub tasks or print status information about the main task.
 
 ## Installation
-> **Requires:**
-- **[PHP ^7.4|^7.0](https://php.net/releases/)**
-- **[Laravel ^6.0|^7.0|^8.0](https://github.com/laravel/laravel)**
-
-
-## Installation
 
 > **Requires:**
 > - **[PHP 7.2.5+](https://php.net/releases/)**
