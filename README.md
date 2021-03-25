@@ -40,10 +40,12 @@ class LaravelInstallCommand extends Command
         $this->task('Installing Laravel', function (ConsoleCheckmarkOutput $output) {
             $output->text('Normal style text');
             $output->success('A success message');
-            $output->error('A error message');
+            $output->error('An error message');
             $output->caution('A caution message');
             $output->comment('A comment message');
             $output->note('A magenta colored note message');
+            
+            return true;
         });
     }
 }
