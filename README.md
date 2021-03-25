@@ -11,7 +11,7 @@
 
 ## About Laravel Console Checkmark
 
-Laravel Console Checkmark is a fork of Laravel Console Task created by [Nuno Maduro](https://github.com/nunomaduro). His package is an output method for Laravel Console Commands. This fork adds the functionality to output sub tasks or print status information about the main task.
+Laravel Console Checkmark is a fork of [nunomaduro/laravel-console-task](https://github.com/nunomaduro/laravel-console-task) created by [Nuno Maduro](https://github.com/nunomaduro). His package is an output method for Laravel Console Commands. This fork adds the functionality to output sub tasks or print status information about the main task.
 
 ## Installation
 > **Requires:**
