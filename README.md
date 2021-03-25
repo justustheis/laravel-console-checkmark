@@ -50,7 +50,6 @@ class LaravelInstallCommand extends Command
             $output->caution('A caution message');
             $output->comment('A comment message');
             $output->note('A magenta colored note message');
-            
         });
     }
 }
