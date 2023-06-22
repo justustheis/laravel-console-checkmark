@@ -1,5 +1,5 @@
 # laravel-console-checkmark is a checkmark style output for laravel console tasks
-![Maintenance](https://img.shields.io/maintenance/yes/2021)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
 ![Packagist](https://img.shields.io/packagist/dt/justustheis/laravel-console-checkmark)
 ![Packagist Version](https://img.shields.io/packagist/v/justustheis/laravel-console-checkmark)
 ![GitHub issues](https://img.shields.io/github/issues/justustheis/laravel-console-checkmark)
